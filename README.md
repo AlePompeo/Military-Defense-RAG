@@ -258,6 +258,10 @@ Answers are grounded exclusively in the indexed documents. The system prompt ins
 Temperature is set to `0.2` for factual consistency. Every answer ends with a **Sources** list
 resolving each `[n]` to its source document, section (if detected), and URL.
 
+## License
+
+MIT License, see [`LICENSE`](LICENSE).
+
 ---
 
 *Keywords: RAG, retrieval augmented generation, offline LLM, LM Studio, ChromaDB, military doctrine, defense, OODA loop, hybrid retrieval, BM25, reranking, Python.*
