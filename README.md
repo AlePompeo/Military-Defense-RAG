@@ -1,5 +1,7 @@
 # Military & Defense RAG
 
+![Python](https://img.shields.io/badge/Python-3-3776AB?logo=python&logoColor=white) ![RAG](https://img.shields.io/badge/RAG-offline-2e7d32) ![ChromaDB](https://img.shields.io/badge/Vector%20DB-ChromaDB-8a2be2) ![LM Studio](https://img.shields.io/badge/LLM-LM%20Studio%20(local)-1f6feb)
+
 A Retrieval-Augmented Generation (RAG) system for military and defense doctrine, designed to run entirely **offline** using a local LLM via [LM Studio](https://lmstudio.ai).
 
 The pipeline mirrors the **OODA loop** (Observe → Orient → Decide → Act):
@@ -10,6 +12,8 @@ The pipeline mirrors the **OODA loop** (Observe → Orient → Decide → Act):
 | Orient | `store.py` / `embedder.py` | Embed (cached) and index chunks into ChromaDB |
 | Decide | `store.py` | Hybrid dense+BM25 retrieval, RRF fusion, cross-encoder reranking |
 | Act | `rag.py` | Generate a grounded, cited answer (with a Sources list) via LM Studio, with a citation sanity check |
+
+**Contents:** [Document Corpus](#document-corpus) · [Requirements](#requirements) · [Usage](#usage) · [Configuration](#configuration) · [Architecture](#architecture) · [Answer quality](#answer-quality)
 
 ---
 
@@ -253,3 +257,7 @@ Answers are grounded exclusively in the indexed documents. The system prompt ins
 
 Temperature is set to `0.2` for factual consistency. Every answer ends with a **Sources** list
 resolving each `[n]` to its source document, section (if detected), and URL.
+
+---
+
+*Keywords: RAG, retrieval augmented generation, offline LLM, LM Studio, ChromaDB, military doctrine, defense, OODA loop, hybrid retrieval, BM25, reranking, Python.*
